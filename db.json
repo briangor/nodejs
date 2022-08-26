@@ -1,0 +1,23 @@
+{
+    "profile": {
+        "name": "briangor"
+    },
+    "books": [
+        {
+            "id": 1,
+            "title": "Harry Potter"
+        },
+        {
+            "id": 2,
+            "title": "Twilight"
+        },
+        {
+            "id": 3,
+            "title": "Lorien Legacies"
+        },
+        {
+            "id": 4,
+            "title": "Think BIG"
+        }
+    ]
+}

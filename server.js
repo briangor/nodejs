@@ -1,6 +1,6 @@
 const http = require('http');
-const express = require('express');
-const app = express();
+const request = require('request');
+const addition = require('./addition');
 
 // Defining hostname and port
 const hostname = '127.0.0.1';
@@ -32,18 +32,14 @@ server.listen(port, hostname, () => {
     console.log(`Server is running at: http://${hostname}:${port}`);
 });
 
-// Routing
 
-// GET method route
-app.get('/', (req, res) => {
-    res.send('GET request to the homepage')
-})
+// Usign a custom module 'addition'
+console.log(addition.addNumber(1,2));
 
-// POST method route
-app.post('/', (req, res) => {
-    res.send('POST request to the homepage')
-})
-
-app.listen(3001, () => {
-    console.log(`Example app listening on port 3001`);
+// request module
+let url = 'https://www.guru99.com/node-js-create-server-get-data.html';
+request(url, (error, res, body) => {
+    console.log(error);
+    console.log(res);
+    console.log(body);
 });
